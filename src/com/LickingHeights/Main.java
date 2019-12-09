@@ -10,6 +10,10 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
+        Pattern1();
+        //Pattern2();
+        //Pattern3();
+        //Pattern4():
 
         
 
@@ -38,7 +42,15 @@ public class Main {
         return number;
     }
 
+    public static void Pattern1(){
+        for (int rowes = 0; rowes < 6; rowes++){
 
+            for (int colums = 0; colums < 6; colums++){
+                System.out.print("*");
 
+            }
+            System.out.println();
+        }
+    }
 
 }
