@@ -10,8 +10,8 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
-        Pattern1();
-        //Pattern2();
+        //Pattern1();
+        Pattern2();
         //Pattern3();
         //Pattern4():
 
@@ -52,5 +52,17 @@ public class Main {
             System.out.println();
         }
     }
+    public static void Pattern2() {
+        for (int rowes = 1; rowes < 7; rowes++) {
+
+            for (int colums = 0; colums < 7; colums++) {
+                System.out.print(rowes);
+
+
+            }
+            System.out.println();
+        }
+    }
+
 
 }
