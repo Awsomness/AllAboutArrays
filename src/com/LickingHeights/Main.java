@@ -13,8 +13,8 @@ public class Main {
         //Pattern1();
         //Pattern2();
         //Pattern3();
-         Pattern4();
-         //Pattern5();
+         //Pattern4();
+         Pattern5();
 
         
 
@@ -89,11 +89,11 @@ public class Main {
         }
     }
     public static void Pattern5() {
-        for (int  rowes =1; rowes < 7 ; rowes++) {
+        for (int  times =1; times < 7 ; times++) {
 
 
-            for (int columns =1; columns <=rowes; columns++) {
-                System.out.print("*");
+            for (int columns =1; columns <=times; columns++) {
+                System.out.print(columns);
 
 
             }
