@@ -15,11 +15,9 @@ public class Main {
         //Pattern3();
         //Pattern4();
         //Pattern5();
-        System.out.println(" sumMethod of array is " + sumMethod(array));
+        //System.out.println(" sumMethod of array is " + sumMethod(array));
+        System.out.println("The minimum of the array is " + minimum(array));
         printArray(array);
-
-
-
 
 
     }
@@ -47,16 +45,17 @@ public class Main {
         return number;
     }
 
-    public static void Pattern1(){
-        for (int rowes = 0; rowes < 6; rowes++){
+    public static void Pattern1() {
+        for (int rowes = 0; rowes < 6; rowes++) {
 
-            for (int colums = 0; colums < 6; colums++){
+            for (int colums = 0; colums < 6; colums++) {
                 System.out.print("*");
 
             }
             System.out.println();
         }
     }
+
     public static void Pattern2() {
         for (int rowes = 1; rowes < 7; rowes++) {
 
@@ -68,10 +67,11 @@ public class Main {
             System.out.println();
         }
     }
-    public static void Pattern3() {
-        for (int  times =1; times < 7; times++) {
 
-            for (int columns =1; columns <7; columns++) {
+    public static void Pattern3() {
+        for (int times = 1; times < 7; times++) {
+
+            for (int columns = 1; columns < 7; columns++) {
                 System.out.print(columns);
 
 
@@ -81,10 +81,10 @@ public class Main {
     }
 
     public static void Pattern4() {
-        for (int  rowes =1; rowes < 7 ; rowes++) {
+        for (int rowes = 1; rowes < 7; rowes++) {
 
 
-            for (int columns =1; columns <=rowes; columns++) {
+            for (int columns = 1; columns <= rowes; columns++) {
                 System.out.print("*");
 
 
@@ -92,11 +92,12 @@ public class Main {
             System.out.println();
         }
     }
+
     public static void Pattern5() {
-        for (int  times =1; times < 7 ; times++) {
+        for (int times = 1; times < 7; times++) {
 
 
-            for (int columns =1; columns <=times; columns++) {
+            for (int columns = 1; columns <= times; columns++) {
                 System.out.print(columns);
 
 
@@ -106,11 +107,25 @@ public class Main {
     }
 
     public static int sumMethod(int[] array) {
-        int sum=0;
+        int sum = 0;
 
-        for(int i=0; i<array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
         return sum;
     }
-}
+
+    public static int minimum(int[] array) {
+        int minimum = array[0];
+
+        for (int i = 0; i < array.length; i++) {
+            if (minimum < array[i]) {
+                array[i] = minimum;
+            }
+
+            minimum = array[i];
+        }
+        return minimum;
+    }
+
+    }
