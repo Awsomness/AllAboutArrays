@@ -13,10 +13,14 @@ public class Main {
         //Pattern1();
         //Pattern2();
         //Pattern3();
-         //Pattern4();
-         Pattern5();
+        //Pattern4();
+        //Pattern5();
+        System.out.println(" sumMethod of array is " + sumMethod(array));
+        printArray(array);
 
-        
+
+
+
 
     }
 
@@ -99,5 +103,14 @@ public class Main {
             }
             System.out.println();
         }
+    }
+
+    public static int sumMethod(int[] array) {
+        int sum=0;
+
+        for(int i=0; i<array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
     }
 }
