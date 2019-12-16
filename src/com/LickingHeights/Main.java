@@ -16,8 +16,8 @@ public class Main {
         //Pattern4();
         //Pattern5();
         //System.out.println(" sumMethod of array is " + sumMethod(array));
-       //System.out.println("The MIN of the array is " + MIN(array));
-        System.out.println("The maximum of the array is " + Max(array));
+        //System.out.println("The MIN of the array is " + MIN(array));
+        //System.out.println("The maximum of the array is " + Max(array));
         printArray(array);
 
 
@@ -142,4 +142,19 @@ public class Main {
         return maximum;
     }
 
+    public static int bubbleSort(int[] array) {
+        int maximum = array[2];
+
+        for (int i = 1; i < array.length; i++) {
+            for (int j = 0; j < array.length - 1; j++) {
+                if (array[i] > array[j]) {
+                    int temp = array[j];
+                    array[j] = array[i];
+                }
+            }
+            maximum = array[i];
+        }
+        return maximum;
     }
+
+        }
