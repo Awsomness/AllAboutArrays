@@ -1,5 +1,7 @@
 package com.LickingHeights;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -7,6 +9,13 @@ public class Main {
         int size = 10;
         int lowestNumber = 0;
         int highestNumber = 10;
+        // Random sentence generator
+
+// names
+       // String[] FirstName = {"-Aaran", "-Baily", "-Caden", "-Dafni", };
+        //String[] MiddleName = {" Louise", " Rose", " Grace", " Jane"};
+        //String[] LastName = {" Kilpatrick", "Smith", " Brown", " Miller",};
+
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
@@ -16,37 +25,24 @@ public class Main {
         //Pattern4();
         //Pattern5();
         //System.out.println(" sumMethod of array is " + sumMethod(array));
-        //System.out.println("The MIN of the array is " + MIN(array));
+       //System.out.println("The MIN of the array is " + MIN(array));
         //System.out.println("The maximum of the array is " + Max(array));
-        printArray(array);
-        System.out.println("After bubble sort");
-        printArray(bubbleSort(array));
+        //printArray(array);
+        //System.out.println("After bubble sort");
+        //printArray(bubbleSort(array));
+        String[] verb = {"climbing", "hurtling", "eating", "running"};
+        String[] places = {"School", "House", "Field", "Seeker City"};
+        String[] times = {"High Noon", "Morning", "Evening", "MidNight"};
+        String[] things = {"Canned coochie", "Dry Erase Marker", "lamp", "Female Dog"};
+        String[] people = {"Billy Bob Joe", "Doggo", "Bob Ross", "Stan Lee"};
+        String[] adjectives = {"red", "scary", "hairy", "fierce"  };
+        sentenceGenerator(verb,places, times, people, adjectives, things );
+        //printName(FirstName, MiddleName, LastName);
+
 
 
     }
 
-    public static int[] createNumberArray(int size, int lowestNumber, int highestNumber) {
-        int[] array = new int[size];
-
-        //fill with random values
-        for (int i = 0; i < size; i++) {
-            array[i] = createRandomNumber(lowestNumber, highestNumber);
-        }
-
-        return array;
-    }
-
-    public static void printArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
-    }
-
-    public static int createRandomNumber(int lowestNumber, int highestNumber) {
-
-        int number = (int) ((Math.random() * (highestNumber - lowestNumber + 1)) + lowestNumber);
-        return number;
-    }
 
     public static void Pattern1() {
         for (int rowes = 0; rowes < 6; rowes++) {
@@ -159,5 +155,40 @@ public class Main {
         }
         return array;
     }
-    
+    public static String randomWord(String[] array) {
+        Random random = new Random();
+        return array[random.nextInt(array.length)];
+
+    }
+    public static void sentenceGenerator(String[] verb, String[] places, String[] times, String[] people, String[] adjectives, String[] things ) {
+
+        System.out.print( "I was " +randomWord(verb)+ " down the " +randomWord(places)+
+                " around " +randomWord(times)+ " with my best friend " +randomWord(people)+
+                " and we "+randomWord(verb)+ " a "+randomWord(adjectives) + " " + randomWord(things)+
+                " that was "+randomWord(verb)+ " "+ randomWord(things)+"s");
+
+    }
+    public static int[] createNumberArray(int size, int lowestNumber, int highestNumber) {
+        int[] array = new int[size];
+
+        //fill with random values
+        for (int i = 0; i < size; i++) {
+            array[i] = createRandomNumber(lowestNumber, highestNumber);
+        }
+
+        return array;
+    }
+
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+
+    public static int createRandomNumber(int lowestNumber, int highestNumber) {
+
+        int number = (int) ((Math.random() * (highestNumber - lowestNumber + 1)) + lowestNumber);
+        return number;
+    }
+
 }
