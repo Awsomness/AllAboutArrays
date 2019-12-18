@@ -12,9 +12,9 @@ public class Main {
         // Random sentence generator
 
 // names
-       // String[] FirstName = {"-Aaran", "-Baily", "-Caden", "-Dafni", };
-        //String[] MiddleName = {" Louise", " Rose", " Grace", " Jane"};
-        //String[] LastName = {" Kilpatrick", "Smith", " Brown", " Miller",};
+       String[] FirstName = {"-Aaran", "-Baily", "-Caden", "-Dafni", };
+       String[] MiddleName = {" Louise", " Rose", " Grace", " Jane"};
+       String[] LastName = {" Kilpatrick", "Smith", " Brown", " Miller",};
 
 
 
@@ -183,6 +183,11 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
+    }
+    public static void print80sRapperName(String[] FirstName, String[]  MiddleName, String[] LastName) {
+
+
+        System.out.print(randomWord(FirstName)+  randomWord( MiddleName)+ randomWord(LastName));
     }
 
     public static int createRandomNumber(int lowestNumber, int highestNumber) {
